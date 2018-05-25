@@ -1,0 +1,7 @@
+#!/bin/bash
+date=$(date)
+file=$(ls -t | head -n1)
+string="ATTENTION!!! Cam Detection PIR at $date"
+echo $string | mutt -s "Intrusion Detection PIR" -a ./$file -- nome.cognome@dominio.com
+
+
